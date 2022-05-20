@@ -129,4 +129,6 @@ set_env "LD_PRELOAD" "/app/dynatrace/oneagent/agent/lib64/liboneagentproc.so"
 # ignore dynamic ports for service generation
 set_env "DT_IGNOREDYNAMICPORT" "\${DT_IGNOREDYNAMICPORT:-true}"
 
+rm "${INSTALLER_FILE}"
+
 puts_step "Dynatrace OneAgent ${VERSION} installed successfully"
