@@ -129,8 +129,8 @@ set_env "LD_PRELOAD" "/app/dynatrace/oneagent/agent/lib64/liboneagentproc.so"
 # ignore dynamic ports for service generation
 set_env "DT_IGNOREDYNAMICPORT" "\${DT_IGNOREDYNAMICPORT:-true}"
 
-puts_step "Deleting all temp files..."
-rm -rf /tmp/*
+puts_step "Deleting OneAgent Installer ${INSTALLER_FILE}..."
+rm -f "$INSTALLER_FILE"
 OUT_PUT=$(ls -lah /tmp/)
 puts_step "Directory content after deleting installer: ${OUT_PUT}"
 
